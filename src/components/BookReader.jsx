@@ -25,7 +25,8 @@ const BookReader = () => {
 
   const chapters = useMemo(() => {
     if (!book) return []
-    return book.content.split('Chapter').filter(c => c.trim()).map(c => `Chapter ${c}`)
+    // For image-based content, treat the entire content as one page
+    return [book.content]
   }, [book])
 
   const progress = ((currentPage + 1) / chapters.length) * 100
@@ -58,7 +59,6 @@ const BookReader = () => {
               <ChevronLeft size={24} />
             </Link>
             <div>
-              <h1 className="text-xs font-black uppercase tracking-[0.3em] text-red-600 mb-1">Now Reading</h1>
               <p className="text-xl font-black uppercase tracking-tighter italic leading-none">{book.title}</p>
             </div>
           </div>  
@@ -122,15 +122,13 @@ const BookReader = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4 }}
-              style={{ fontSize: `${fontSize}px` }}
-              className="leading-[1.8] font-serif max-w-none text-left"
+              className="flex justify-center items-center"
             >
-              <div className="whitespace-pre-wrap selection:bg-red-600 selection:text-white">
-                {/* Custom First Letter Dropcap Effect */}
-                <div className="first-letter:text-6xl first-letter:font-black first-letter:text-red-600 first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">
-                  {chapters[currentPage]}
-                </div>
-              </div>
+              <img 
+                src={book.cover} 
+                alt={book.title}
+                className="max-w-full max-h-[80vh] object-contain border-4 border-slate-950 shadow-[8px_8px_0px_rgba(220,38,38,1)]"
+              />
             </motion.div>
           </AnimatePresence>
         </main>
