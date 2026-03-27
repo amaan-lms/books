@@ -12,6 +12,17 @@ export const sampleBooks = [
   },
   {
     id: 2,
+    title: "Legal Documentation - Alternate",
+    author: "Legal Document",
+    cover: "/src/assets/Notice of Proof of Cclaim_002 (1).jpeg",
+    description: "Scanned legal document alternate view",
+    category: "Legal",
+    rating: 5.0,
+    pages: 1,
+    content: "Legal Documentation - Alternate View - Legal Document"
+  },
+  {
+    id: 3,
     title: "Legal Documentation - Page 2",
     author: "Legal Document",
     cover: "/src/assets/Notice of Proof of Cclaim_001.jpeg",
@@ -20,16 +31,5 @@ export const sampleBooks = [
     rating: 5.0,
     pages: 1,
     content: "Legal Documentation - Page 2 - Legal Document"
-  },
-  {
-    id: 3,
-    title: "Legal Documentation - Page 3",
-    author: "Legal Document",
-    cover: "/src/assets/Notice of Proof of Cclaim_002.jpeg",
-    description: "Scanned legal document image final page",
-    category: "Legal",
-    rating: 5.0,
-    pages: 1,
-    content: "Legal Documentation - Page 3 - Legal Document"
   }
 ]

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { ArrowRight, Plus, Hash, Bookmark } from 'lucide-react';
+import noticeImage from '../assets/Notice of Proof of Cclaim.jpeg';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -97,45 +98,22 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column: Interactive 3D Book & Metadata */}
+          {/* Right Column: Notice of Proof of Claim Image */}
           <div className="lg:col-span-5 relative h-[700px] flex items-center justify-center">
             
-          
-
-            {/* The Interactive "Manuscript" */}
-            <motion.div 
-              // style={{ rotateX, rotateY, perspective: 1000 }}
-              className="relative w-72 h-[450px] bg-slate-950 shadow-[30px_30px_60px_rgba(0,0,0,0.3)] z-20 transition-shadow duration-500 group cursor-none"
+            {/* Notice of Proof of Claim Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="relative w-[500px] h-[500px] flex items-center justify-center"
             >
-              {/* Internal Content of the Book */}
-              <div className="absolute inset-0 flex flex-col justify-between p-10 border-4 border-slate-900 m-2 overflow-hidden">
-                <div className="flex justify-between items-start">
-                    <Bookmark size={24} className="text-red-600 fill-red-600" />
-                    <span className="text-[10px] font-black text-white/30 uppercase tracking-[0.5em] rotate-90 origin-right">Shelf_04</span>
-                </div>
-                
-                <div>
-                    <h2 className="text-white text-4xl font-black leading-none mb-4 uppercase tracking-tighter">
-                      The <br/> <span className="text-red-600 italic font-serif">Deep</span> <br/> Archive
-                    </h2>
-                    <div className="h-1 w-12 bg-red-600 mb-6" />
-                </div>
-
-                <div className="flex justify-between items-end border-t border-white/10 pt-6">
-                  <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">Est. 2026</span>
-                  <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center group-hover:scale-125 transition-transform">
-                    <Plus size={16} className="text-white" />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Spine Detail */}
-              <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-black to-transparent opacity-50" />
+              <img 
+                src={noticeImage} 
+                alt="Notice of Proof of Claim"
+                className="w-full h-full object-contain rounded-3xl shadow-[30px_30px_60px_rgba(0,0,0,0.3)] saturate-200 contrast-125 brightness-110"
+              />
             </motion.div>
-
-            {/* Background Geometric Elements */}
-            <div className="absolute w-[500px] h-[500px] border border-slate-100 rounded-full animate-spin-slow" />
-            <div className="absolute w-80 h-80 bg-red-600/5 blur-[120px] rounded-full" />
           </div>
 
         </div>
