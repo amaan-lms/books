@@ -53,15 +53,6 @@ const Hero = () => {
           {/* Left Column: Aggressive Editorial Typography */}
           <div className="lg:col-span-7">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-4 text-red-600 mb-8"
-            >
-              <Hash size={18} className="animate-pulse" />
-              <span className="font-black tracking-[0.4em] text-[10px] uppercase">Editorial Manuscript // 2026</span>
-            </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

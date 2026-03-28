@@ -138,27 +138,11 @@ const About = () => {
           ))}
         </div>
 
-        {/* Section 4: The Stats (Impact Section) */}
-        <div className="my-40 py-24 bg-red-600 rounded-[4rem] text-white flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent pointer-events-none" />
-          <h2 className="text-5xl md:text-6xl font-black mb-16 tracking-tighter">The Pulse of the Community</h2>
-          <div className="grid md:grid-cols-2 gap-20">
-            <div>
-              <div className="text-8xl md:text-6xl font-black mb-2 tracking-tighter"><Counter value="50" />k+</div>
-              <p className="text-red-100 font-bold tracking-[0.3em] uppercase">Volumes Archived</p>
-            </div>
-            <div>
-              <div className="text-8xl md:text-6xl font-black mb-2 tracking-tighter"><Counter value="2" />M+</div>
-              <p className="text-red-100 font-bold tracking-[0.3em] uppercase">Global Readers</p>
-            </div>
-          </div>
-        </div>
-
         {/* CTA: Editorial Footer */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="bg-slate-950 rounded-[3rem] p-16 md:p-32 text-center text-white relative"
+          className="bg-slate-950 rounded-[3rem] p-16 md:p-32 text-center text-white relative mt-40"
         >
           <h2 className="text-5xl md:text-6xl font-black mb-12 tracking-tighter">Your next chapter <br/> starts now.</h2>
           <Link

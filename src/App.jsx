@@ -7,6 +7,8 @@ import BookReader from "./components/BookReader"
 import About from "./components/About"
 import Footer from "./components/Footer"
 import CTA from "./components/CTA"
+import Privacy from "./components/Privacy"
+import Terms from "./components/Terms"
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -31,6 +33,8 @@ function App() {
             <Route path="/read/:bookId" element={<BookReader />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<CTA />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />

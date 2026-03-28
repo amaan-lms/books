@@ -84,61 +84,6 @@ const Footer = () => {
             </form>
           </div>
 
-          {/* Links: Clean Columns */}
-          <div className="lg:col-span-2 lg:col-start-7">
-            <h4 className="text-xs uppercase tracking-[0.3em] font-black text-red-600 mb-8">Navigation</h4>
-            <ul className="space-y-4">
-              <li>
-                <Link 
-                  to="/" 
-                  className="text-gray-400 hover:text-white hover:italic transition-all text-lg font-medium"
-                >
-                  Archive
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/books" 
-                  className="text-gray-400 hover:text-white hover:italic transition-all text-lg font-medium"
-                >
-                  The Library
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/about" 
-                  className="text-gray-400 hover:text-white hover:italic transition-all text-lg font-medium"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-400 hover:text-white hover:italic transition-all text-lg font-medium"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="text-xs uppercase tracking-[0.3em] font-black text-red-600 mb-8">Curated</h4>
-            <ul className="space-y-4">
-              {['New Releases', 'Classic Lit', 'Philosophy', 'Sci-Fi'].map((cat) => (
-                <li key={cat}>
-                  <Link 
-                    to={`/books?category=${cat}`} 
-                    className="text-gray-400 hover:text-white hover:italic transition-all text-lg font-medium"
-                  >
-                    {cat}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Social Icons: Neobrutalist Blocks */}
           <div className="lg:col-span-2">
             <h4 className="text-xs uppercase tracking-[0.3em] font-black text-red-600 mb-8">Follow</h4>
@@ -160,13 +105,13 @@ const Footer = () => {
         {/* Bottom Bar: High Contrast */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-gray-600 text-[10px] font-bold tracking-[0.4em] uppercase">
-            © 2026 BookShelf Digital Archive. All Rights Reserved.
+            2026 BookShelf Digital Archive. All Rights Reserved.
           </div>
           
           <div className="flex items-center gap-10">
             <div className="flex gap-6">
-              <a href="#" className="text-[10px] font-bold tracking-[0.2em] text-gray-600 hover:text-red-600 transition uppercase">Privacy</a>
-              <a href="#" className="text-[10px] font-bold tracking-[0.2em] text-gray-600 hover:text-red-600 transition uppercase">Terms</a>
+              <Link to="/privacy" className="text-[10px] font-bold tracking-[0.2em] text-gray-600 hover:text-red-600 transition uppercase">Privacy</Link>
+              <Link to="/terms" className="text-[10px] font-bold tracking-[0.2em] text-gray-600 hover:text-red-600 transition uppercase">Terms</Link>
             </div>
             
             <motion.button 

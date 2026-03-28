@@ -91,7 +91,7 @@ const BookCatalog = () => {
         {/* E-Learning Button */}
         <div className="text-center mt-12">
           <button className="px-12 py-4 bg-red-600 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-slate-950 transition-colors shadow-lg">
-            e-learning
+            Read
           </button>
         </div>
 
